@@ -9,6 +9,13 @@ const comprehend = new AWS.Comprehend({ apiVersion: '2017-11-27' })
 - Translate's TargetLanguageCode is set to english
 */
 
+/*
+example test event:
+{
+    "text": "susah sangat nak guna app dia ni"
+}
+*/
+
 exports.handler = async (event) => {
     const translateParams = {
         SourceLanguageCode: 'auto',
